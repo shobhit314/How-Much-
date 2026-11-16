@@ -1,4 +1,4 @@
-# kitna: how much carbon is your day online?
+# How Much?
 
 A small, dependency-free web app: sliders in, estimated kg CO₂e per year out, with India's grid factor.
 Plain HTML + CSS + JS. No build step, no npm packages, no backend.
