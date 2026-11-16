@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How Much?</title>
+<meta name="description" content="Estimate the carbon footprint of your digital habits using India's grid.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Ccircle cx='4' cy='4' r='3' fill='%23b5472b'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><b>How Much?</b><span lang="hi"></span></header>
+<main>
+<h1>How much carbon is your day online?</h1>
+<p class="lead">Every video, song and scroll runs on electricity, and India’s grid is still mostly coal. Tell us roughly how you use your phone and we’ll estimate what it adds up to in a year.</p>
+<noscript><p>This calculator needs JavaScript.</p></noscript>
+
+<section aria-labelledby="a">
+<h2 id="a">Your day, in hours</h2>
+<div id="hrs"></div>
+</section>
+
+<section aria-labelledby="b">
+<h2 id="b">Your setup</h2>
+<fieldset><legend>Device</legend>
+<label><input type="radio" name="dev" value="phone" checked>Phone</label>
+<label><input type="radio" name="dev" value="laptop">Laptop</label></fieldset>
+<fieldset><legend>Connection</legend>
+<label><input type="radio" name="net" value="mobile" checked>Mobile data</label>
+<label><input type="radio" name="net" value="wifi">Wi-Fi</label></fieldset>
+<fieldset><legend>Video quality</legend>
+<label><input type="radio" name="q" value="480">480p</label>
+<label><input type="radio" name="q" value="720" checked>720p</label>
+<label><input type="radio" name="q" value="1080">1080p</label></fieldset>
+<label class="row"><span>Years you keep the device</span><input type="range" id="yrs" min="1" max="6" step="1" value="3"><output id="yo">3</output></label>
+</section>
+
+<section aria-labelledby="c" aria-live="polite">
+<h2 id="c">Your year</h2>
+<p class="big"><span id="tot">0</span> <small>kg CO₂e</small></p>
+<p id="share" class="dim"></p>
+<ul id="bars"></ul>
+<h2>Smaller footprint, same life</h2>
+<ul id="swaps" class="swaps"></ul>
+</section>
+
+<section>
+<h2>How we worked this out</h2>
+<p class="dim">Energy per hour = device power + data used × (network + data-centre energy per GB). Emissions = energy × India’s grid factor (about 0.71 kg CO₂ per kWh) . Making the device is spread over the years you keep it. These are rough, published-range estimates. The real number could be half or double. Every assumption sits at the top of <code>app.js</code>.</p>
+</section>
+</main>
+<footer>Built for a sustainable computing course.</footer>
+<script src="app.js"></script>
+</body>
+</html>

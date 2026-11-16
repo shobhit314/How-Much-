@@ -1,0 +1,29 @@
+:root{--bg:#f4f0e8;--fg:#1c1b18;--dim:#6b675e;--line:#d8d2c4;--ac:#b5472b;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--bg:#141311;--fg:#ece8df;--dim:#9a958a;--line:#2e2c27;--ac:#e0825f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,"Segoe UI","Nirmala UI",sans-serif}
+header,main,footer{max-width:38rem;margin:0 auto;padding:0 1.25rem}
+header{display:flex;justify-content:space-between;align-items:baseline;padding-top:1.5rem;font-family:Georgia,serif;font-size:1.2rem}
+header span{color:var(--ac)}
+h1{font:400 clamp(2rem,7vw,2.8rem)/1.15 Georgia,serif;margin:3rem 0 1rem}
+h2{font:600 .75rem/1 system-ui;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:3rem 0 .75rem}
+.lead{font-size:1.1rem}.dim{color:var(--dim);font-size:.95rem}
+section label.row,#hrs label{display:grid;grid-template-columns:9rem 1fr 3.2rem;gap:.75rem;align-items:center;padding:.55rem 0;border-top:1px solid var(--line)}
+output{text-align:right;font-variant-numeric:tabular-nums;color:var(--dim)}
+input[type=range]{width:100%;accent-color:var(--ac)}
+fieldset{border:0;border-top:1px solid var(--line);margin:0;padding:.55rem 0;display:flex;flex-wrap:wrap;gap:.4rem 1.25rem}
+legend{float:left;width:9rem;padding:0;margin-right:.75rem}
+fieldset label{cursor:pointer}
+input[type=radio]{accent-color:var(--ac);margin-right:.4rem}
+.big{font:400 4.2rem/1 Georgia,serif;margin:.5rem 0 .25rem;color:var(--ac)}
+.big small{font:1rem system-ui;color:var(--dim)}
+ul{list-style:none;padding:0;margin:1.25rem 0}
+#bars li{display:grid;grid-template-columns:9rem 1fr 4rem;gap:.75rem;align-items:center;padding:.5rem 0;border-top:1px solid var(--line);font-size:.95rem}
+#bars i{display:block;height:3px;background:var(--ac);min-width:1px;transition:width .25s}
+#bars b{text-align:right;font-weight:400;font-variant-numeric:tabular-nums}
+.swaps li{padding:.7rem 0;border-top:1px solid var(--line)}
+.swaps strong{color:var(--ac);font-weight:600}
+code{font-size:.85em}
+footer{padding:3rem 1.25rem;font-size:.85rem;color:var(--dim)}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+@media(max-width:30rem){legend{float:none;width:100%}#hrs label,section label.row,#bars li{grid-template-columns:6.5rem 1fr 3.2rem}.big{font-size:3.4rem}}
